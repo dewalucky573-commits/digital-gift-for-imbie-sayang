@@ -1,33 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be My Valentine?</title>
+    <title>Spesial Buat Kamu ❤️</title>
     <style>
-        body { text-align: center; font-family: 'Courier New', sans-serif; background: #ffe6e6; padding-top: 100px; }
-        h1 { color: #ff4d4d; }
-        .btn-container { position: relative; height: 100px; margin-top: 50px; }
-        button { font-size: 20px; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; position: absolute; }
-        #yesBtn { background: #ff4d4d; color: white; left: 40%; }
-        #noBtn { background: #b3b3b3; color: white; left: 52%; transition: 0.2s ease; }
+        body {
+            background-color: #ffe6e6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .box {
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: inline-block;
+            max-width: 400px;
+        }
+        h1 { color: #ff4d6d; }
+        p { color: #4a4a4a; font-size: 18px; line-height: 1.6; }
+        .hati { font-size: 50px; animation: detak 1.2s infinite; }
+        @keyframes detak {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+            100% { transform: scale(1); }
+        }
     </style>
 </head>
 <body>
-    <h1>Will you be my Valentine? 🌹</h1>
-    <div class="btn-container">
-        <button id="yesBtn" onclick="alert('Yay! ❤️ Can\'t wait!')">Yes</button>
-        <button id="noBtn" onmouseover="moveButton()">No</button>
+
+    <div class="box">
+        <div class="hati">❤️</div>
+        <h1>Halo Cantik/Ganteng!</h1>
+        <p>Web ini sengaja aku bikin khusus buat kamu. Terima kasih ya sudah jadi orang yang paling sabar dan selalu ada buat aku. <i>I love you more than words can say!</i></p>
     </div>
 
-    <script>
-        function moveButton() {
-            const noBtn = document.getElementById('noBtn');
-            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
-            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
-            noBtn.style.left = `${x}px`;
-            noBtn.style.top = `${y}px`;
-        }
-    </script>
 </body>
 </html>
